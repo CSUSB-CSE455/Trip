@@ -44,7 +44,7 @@ public class PasswordResetActivityTest {
 
         launchActivityWithIntent();
 
-        onView(withId(R.id.regBackBtn)).perform(click());
+        //onView(withId(R.id.regBackBtn)).perform(click());
 
     }
 

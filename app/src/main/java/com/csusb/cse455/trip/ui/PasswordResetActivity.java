@@ -108,15 +108,15 @@ public class PasswordResetActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            running = true;
-            progressDialog = ProgressDialog.show(PasswordResetActivity.this,"","Please wait...",true,false);
-            progressDialog.setCanceledOnTouchOutside(true);
+            //running = true;
+            //progressDialog = ProgressDialog.show(PasswordResetActivity.this,"","Please wait...",true,false);
+            //progressDialog.setCanceledOnTouchOutside(true);
         }
 
         @Override
         protected void onPostExecute(Void aVoid) {
-            super.onPostExecute(aVoid);
-            progressDialog.dismiss();
+            //super.onPostExecute(aVoid);
+            //progressDialog.dismiss();
         }
     }
 }

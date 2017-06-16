@@ -62,8 +62,8 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // If information is properly formatted...
-                if (Format.isTextViewEmpty(firstNameView) &&
-                        Format.isTextViewEmpty(lastNameView) &&
+                if (!Format.isTextViewEmpty(firstNameView) &&
+                        !Format.isTextViewEmpty(lastNameView) &&
                         Format.checkEmailFormat(emailView) &&
                         Format.checkNewPasswordFormat(passwordView, rePasswordView)) {
                     // Attempt to register.

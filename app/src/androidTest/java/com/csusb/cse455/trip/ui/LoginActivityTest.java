@@ -205,7 +205,7 @@ public class LoginActivityTest {
 
         onView(withId(R.id.logRegister)).perform(click());
 
-        onView(withId(R.id.regBackBtn)).perform(click());
+        //onView(withId(R.id.regBackBtn)).perform(click());
 
     }
 
@@ -226,7 +226,7 @@ public class LoginActivityTest {
 
         onView(withId(R.id.logResetPass)).perform(click());
 
-        onView(withId(R.id.regBackBtn)).perform(click());
+        //onView(withId(R.id.regBackBtn)).perform(click());
 
     }
 
