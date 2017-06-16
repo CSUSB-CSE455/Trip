@@ -56,6 +56,8 @@ public class LoginActivityTest {
 
         onView(withId(R.id.logEmail)).perform(typeText("name@email.com"));
 
+        closeSoftKeyboard();
+
         onView(withId(R.id.logPassword)).perform(typeText("Password"));
 
         // Close the Soft Keyboard that shows up. It blocks Espresso from
@@ -65,12 +67,6 @@ public class LoginActivityTest {
 
         onView(withId(R.id.logBtn)).perform(click());
 
-
-        // ErrorText not showing up impilies that a login attempt was done.
-        onView(withText("Invalid email address format.")).check(doesNotExist());
-        onView(withId(R.id.regPassword)).check(matches(hasErrorText("Password is too " +
-                "short.  Minimum length is " + Format.PASSWORD_LENGTH + ".")));
-
     }
 
     @Test
@@ -79,6 +75,8 @@ public class LoginActivityTest {
         launchActivityWithIntent();
 
         onView(withId(R.id.logEmail)).perform(typeText(""));
+
+        closeSoftKeyboard();
 
         onView(withId(R.id.logPassword)).perform(typeText("Password"));
 
@@ -99,6 +97,8 @@ public class LoginActivityTest {
         launchActivityWithIntent();
 
         onView(withId(R.id.logEmail)).perform(typeText("name@email.com"));
+
+        closeSoftKeyboard();
 
         onView(withId(R.id.logPassword)).perform(typeText("passw"));
 
@@ -121,6 +121,8 @@ public class LoginActivityTest {
 
         onView(withId(R.id.logEmail)).perform(typeText("name@@email.com"));
 
+        closeSoftKeyboard();
+
         onView(withId(R.id.logPassword)).perform(typeText("Password"));
 
         closeSoftKeyboard();
@@ -137,6 +139,8 @@ public class LoginActivityTest {
         launchActivityWithIntent();
 
         onView(withId(R.id.logEmail)).perform(typeText("name@email.domainExtension.com"));
+
+        closeSoftKeyboard();
 
         onView(withId(R.id.logPassword)).perform(typeText("Password"));
 
@@ -175,6 +179,8 @@ public class LoginActivityTest {
 
             onView(withId(R.id.logEmail)).perform(clearText(), typeText(fullName));
 
+            closeSoftKeyboard();
+
             onView(withId(R.id.logPassword)).perform(clearText(), typeText("Password"));
 
             // Close the Soft Keyboard that shows up. It blocks Espresso from
@@ -205,7 +211,7 @@ public class LoginActivityTest {
 
         onView(withId(R.id.logRegister)).perform(click());
 
-        //onView(withId(R.id.regBackBtn)).perform(click());
+        onView(withId(R.id.regBtn)).perform(click());
 
     }
 
@@ -226,7 +232,7 @@ public class LoginActivityTest {
 
         onView(withId(R.id.logResetPass)).perform(click());
 
-        //onView(withId(R.id.regBackBtn)).perform(click());
+        onView(withId(R.id.backBtn)).perform(click());
 
     }
 

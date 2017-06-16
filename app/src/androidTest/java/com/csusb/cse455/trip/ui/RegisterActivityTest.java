@@ -56,9 +56,15 @@ public class RegisterActivityTest {
 
         onView(withId(R.id.regFirstName)).perform(typeText("Mary"));
 
+        closeSoftKeyboard();
+
         onView(withId(R.id.regLastName)).perform(typeText("Sue"));
 
+        closeSoftKeyboard();
+
         onView(withId(R.id.regEmail)).perform(typeText("name2@email.com"));
+
+        closeSoftKeyboard();
 
         onView(withId(R.id.regPassword)).perform(typeText("Password123"));
 
@@ -70,13 +76,6 @@ public class RegisterActivityTest {
 
         onView(withId(R.id.regBtn)).perform(click());
 
-        // ErrorText not showing up impilies that a registration attempt was done.
-        onView(withText("Passwords do not match.")).check(doesNotExist());
-        onView(withText("This field is required.")).check(doesNotExist());
-        onView(withText("Invalid email address format.")).check(doesNotExist());
-        onView(withId(R.id.regPassword)).check(matches(hasErrorText("Password is too " +
-                "short.  Minimum length is " + Format.PASSWORD_LENGTH + ".")));
-
     }
 
     @Test
@@ -86,7 +85,11 @@ public class RegisterActivityTest {
 
         onView(withId(R.id.regFirstName)).perform(typeText("Gary"));
 
+        closeSoftKeyboard();
+
         onView(withId(R.id.regLastName)).perform(typeText("Stu"));
+
+        closeSoftKeyboard();
 
         onView(withId(R.id.regEmail)).perform(typeText(""));
 
@@ -111,9 +114,15 @@ public class RegisterActivityTest {
 
         onView(withId(R.id.regFirstName)).perform(typeText("Gary"));
 
+        closeSoftKeyboard();
+
         onView(withId(R.id.regLastName)).perform(typeText("Stu"));
 
+        closeSoftKeyboard();
+
         onView(withId(R.id.regEmail)).perform(typeText("name@@email.com"));
+
+        closeSoftKeyboard();
 
         onView(withId(R.id.regPassword)).perform(typeText("Password123"));
 
@@ -136,9 +145,15 @@ public class RegisterActivityTest {
 
         onView(withId(R.id.regFirstName)).perform(typeText("Gary"));
 
+        closeSoftKeyboard();
+
         onView(withId(R.id.regLastName)).perform(typeText("Stu"));
 
+        closeSoftKeyboard();
+
         onView(withId(R.id.regEmail)).perform(typeText("name@email.com"));
+
+        closeSoftKeyboard();
 
         onView(withId(R.id.regPassword)).perform(typeText("Pass"));
 
@@ -162,9 +177,15 @@ public class RegisterActivityTest {
 
         onView(withId(R.id.regFirstName)).perform(typeText("Gary"));
 
+        closeSoftKeyboard();
+
         onView(withId(R.id.regLastName)).perform(typeText("Stu"));
 
+        closeSoftKeyboard();
+
         onView(withId(R.id.regEmail)).perform(typeText("name@email.com"));
+
+        closeSoftKeyboard();
 
         onView(withId(R.id.regPassword)).perform(typeText("Password1"));
 
@@ -187,9 +208,15 @@ public class RegisterActivityTest {
 
         onView(withId(R.id.regFirstName)).perform(typeText(""));
 
+        closeSoftKeyboard();
+
         onView(withId(R.id.regLastName)).perform(typeText("Stu"));
 
+        closeSoftKeyboard();
+
         onView(withId(R.id.regEmail)).perform(typeText("name@email.com"));
+
+        closeSoftKeyboard();
 
         onView(withId(R.id.regPassword)).perform(typeText("Password"));
 
@@ -212,9 +239,15 @@ public class RegisterActivityTest {
 
         onView(withId(R.id.regFirstName)).perform(typeText("Gary"));
 
+        closeSoftKeyboard();
+
         onView(withId(R.id.regLastName)).perform(typeText(""));
 
+        closeSoftKeyboard();
+
         onView(withId(R.id.regEmail)).perform(typeText("name@email.com"));
+
+        closeSoftKeyboard();
 
         onView(withId(R.id.regPassword)).perform(typeText("Password"));
 
